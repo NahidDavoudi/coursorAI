@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ثبت‌نام موفق | آموزشگاه فامو</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/register.css" />
+    <style>
+        .success-section {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at 30% 40%, rgba(30,58,138,0.1) 0%, rgba(255,255,255,0) 80%);
+        }
+        .success-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 3rem 2.5rem 2.5rem 2.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            max-width: 410px;
+            margin: 0 auto;
+            border: 1px solid var(--light-gray);
+            animation: fadeInUp 1s;
+        }
+        .success-icon {
+            font-size: 5rem;
+            color: var(--primary-light);
+            margin-bottom: 1.2rem;
+            animation: pop 0.9s;
+        }
+        @keyframes pop {
+            0% {transform: scale(0.3);}
+            70% {transform: scale(1.2);}
+            100% {transform: scale(1);}
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .success-card h2 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        .success-card p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .success-divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            margin: 1.2rem auto 2rem auto;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 1.8rem;
+        }
+        .back-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.08rem;
+        }
+        .back-link a:hover { color: var(--primary-dark);}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#"><img src="./logo.png" alt="لوگوی آموزشگاه فامو"></a>
+                <h1>فامو <span>آکادمی</span></h1>
+            </div>
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="index.html#courses">دوره‌ها</a></li>
+                    <li><a href="index.html#instructors">اساتید</a></li>
+                    <li><a href="index.html#features">خدمات</a></li>
+                    <li><a href="index.html#contact">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="منوی موبایل" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="success-section">
+        <div class="success-card">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>ثبت‌نام با موفقیت انجام شد!</h2>
+            <div class="success-divider"></div>
+            <p>
+                از ثبت‌نام شما در آموزشگاه فامو سپاسگزاریم.<br>
+                همکاران ما ظرف <strong>۲۴ ساعت آینده</strong> با شما تماس خواهند گرفت.<br>
+                اگر سوالی دارید با ما تماس بگیرید.
+            </p>
+            <div class="back-link">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> بازگشت به صفحه اصلی</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Mobile menu script for consistency
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mainMenu');
+        mobileBtn.addEventListener('click', () => nav.classList.toggle('show'));
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('show'));
+        });
+    </script>
+</body>
+</html>
